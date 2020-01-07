@@ -4,7 +4,7 @@
 	"description": "sfe 组件库 vscode代码段",
 	"icon": "images/logo.png",
 	"publisher": "wanghongjie",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
