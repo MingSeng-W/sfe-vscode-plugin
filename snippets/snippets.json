@@ -1,0 +1,110 @@
+{
+    "itemGenerator": {
+      "prefix": "sfeig",
+      "body": ["<ItemGenerator form={${1:form}} options={{",
+        "\tconfig:[",
+        "\t\t{",
+          "\t\t\titem: {",
+             "\t\t\t\tid: 'input',",
+             "\t\t\t\tlabel: '数字',",
+             "\t\t\t\ttype: 'number'",
+          "\t\t\t}",
+      "\t\t},",
+      "\t\t{",
+       "\t\t\titem: {",
+            "\t\t\t\tid: 'age',",
+            "\t\t\t\ttype: 'select',",
+            "\t\t\t\tlabel: '基础Select',",
+            "\t\t\t\tdata: ${2:config},",
+            "\t\t\t\tparams: {",
+                "\t\t\t\tshouldOptionDisabled: (${3:val}) => ${3:val} == 2",
+            "\t\t\t\t\t}",
+        "\t\t\t}",
+    "\t\t},",
+    "\t\t{",
+      "\t\t\titem: {",
+          "\t\t\t\tid: 'ageMulit',",
+          "\t\t\t\ttype: 'select',",
+          "\t\t\t\tlabel: 'Select多选',",
+          "\t\t\t\tdata: ${4:config},",
+          "\t\t\t\tprops: {",
+              "\t\t\t\t\tmode: 'multiple'",
+          "\t\t\t\t\t}",
+      "\t\t\t}",
+  "\t\t},",
+  "\t\t{",
+    "\t\t\titem: {",
+        "\t\t\t\tid: 'ageGroup',",
+        "\t\t\t\ttype: 'select',",
+        "\t\t\t\tlabel: 'Select分组',",
+        "\t\t\t\tdata: ${5:config},",
+        "\t\t\t\tparams: {",
+            "\t\t\t\t\toptGroup: true",
+        "\t\t\t\t}",
+    "\t\t\t}",
+"\t\t},",
+  "\t\t{",
+    "\t\t\titem: {",
+        "\t\t\t\tid: 'ageGroup',",
+        "\t\t\t\ttype: 'select',",
+        "\t\t\t\tlabel: 'Select分组',",
+        "\t\t\t\tdata: ${6:config},",
+        "\t\t\t\tparams: {",
+            "\t\t\t\t\toptGroup: true",
+        "\t\t\t\t\t}",
+    "\t\t\t}",
+"\t\t},",
+"\t\t{",
+  "\t\t\titem: {",
+      "\t\t\t\tid: 'datepicker|rangepicker|weekpicker|monthpicker|timepicker',",
+      "\t\t\t\ttype: '${7|datepicker,rangepicker,weekpicker,monthpicker,timepicker|}',",
+      "\t\t\t\tlabel: '日期'",
+  "\t\t\t}",
+"\t\t},",
+"\t\t{",
+  "\t\t\titem: {",
+      "\t\t\t\tid: 'textarea',",
+      "\t\t\t\tlabel: '文本框',",
+      "\t\t\t\ttype: 'textarea'",
+  "\t\t\t}",
+"\t\t},",
+"更多配置http://sfe.intra.xiaojukeji.com/component/ItemGenerator",
+          "]",
+        "}}/>"],
+      "description": "itemGenerator代码段input, select, picker, textarea"
+    },
+    "dangerHtml": {
+      "prefix": "sfedh",
+      "body": [
+        "<DangerHtml",
+        "\thtml={\"<div style=\"fondt-size: 14px;color: blue\">",
+                "\t\t<p>我是带有自定义P标签的DangerHtml测试</p>",
+            "\t</div>\"}",
+        "\t\ttag=\"p\"",
+    "\t/>"
+      ],
+      "description": "DangerHtml 基于React，动态显示HTML内容, 支持自定义Tag"
+    },
+    "asyncComponent": {
+      "prefix": "sfeac",
+      "body": [
+        "const MyList = AsyncComponent(() => import(${1:'/my/list'}));"
+      ],
+      "description": "基于Suspense/lazy的React异步加载高阶组件"
+    },
+    "inputMaxlength": {
+      "prefix": "sfeim",
+      "body": [
+        "<InputMaxLength maxLength={${1:20}} defaultValue=\"${2:12313}\" />"
+      ],
+      "description": "基于Antd Input，带有最大文字后缀输入框"
+    },
+    "countTime": {
+      "prefix": "sfedm",
+      "body": [
+        " <CountTime startTime={${1:time}} duration={${2:duration}} action=\"${3|minus,add|}\" onEnd={${4:this.handleEndTime}} />"
+      ],
+      "description": "简易、灵活配置的倒计时组件"
+    }
+  }
+  
